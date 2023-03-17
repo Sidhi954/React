@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-
+//Small Project that defines Fragments
 ReactDOM.render(
   <>
       <h1>Netflix Top 5 Series</h1>
