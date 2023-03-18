@@ -1,0 +1,26 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+
+const img1="https://picsum.photos/200/300";
+const img2="https://picsum.photos/350/300";
+const img3="https://picsum.photos/250/300";
+const link="https://www.google.com/search?gs_ssp=eJzj4tTP1TcwMU02T1JgNGB0YPBiS8_PT89JBQBASQXT&q=google&rlz=1C1ONGR_enIN972IN972&oq=google&aqs=chrome.1.69i57j46i67i131i199i433i465j69i65j69i60l2j5j69i65j69i60.6870j0j7&sourceid=chrome&ie=UTF-8";
+
+const heading={
+  color:'brown',
+  textTransform:'capitalize',
+  textAlign:'center',
+  textShadow:'0 2px 4px aqua'
+}
+
+ReactDOM.render(<>
+    <h1 style={heading}>I belong to Patna.</h1>
+    <div className='img_div'>
+    <img src={img1} alt="randomImages"/>
+    <img src={img2} alt="randomImages"/>
+    <a href={link}> 
+      <img src={img3} alt="randomImages"/>
+    </a>
+    </div>
+</>,document.getElementById("root"));
