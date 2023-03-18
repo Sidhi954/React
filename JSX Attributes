@@ -1,0 +1,16 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+const img1="https://picsum.photos/200/300";
+const img2="https://picsum.photos/250/300";
+const img3="https://picsum.photos/200/350";
+const link="https://www.google.com/search?gs_ssp=eJzj4tTP1TcwMU02T1JgNGB0YPBiS8_PT89JBQBASQXT&q=google&rlz=1C1ONGR_enIN972IN972&oq=google&aqs=chrome.1.69i57j46i67i131i199i433i465j69i65j69i60l2j5j69i65j69i60.6870j0j7&sourceid=chrome&ie=UTF-8";
+
+ReactDOM.render(<>
+    <h1 contentEditable="true">I belong to Patna.</h1>
+    <img src={img1} alt="randomImages"/>
+    <img src={img2} alt="randomImages"/>
+    <a href={link} target="_blank"> 
+      <img src={img3} alt="randomImages"/>
+    </a>
+</>,document.getElementById("root"));
