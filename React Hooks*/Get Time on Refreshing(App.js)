@@ -1,0 +1,19 @@
+import React from 'react';
+import { useState } from 'react';
+
+const App=()=>{
+  let t=new Date().toLocaleTimeString();
+
+  const [ctime,sTime]=useState(t);
+
+  const UpdateTime=()=>{
+    t=new Date().toLocaleTimeString();
+    sTime(t);
+  }
+  return(<>
+    <h1>{ctime}</h1>
+    <button onClick={UpdateTime}>Click ME</button>
+  </>);
+}
+
+export default App;
