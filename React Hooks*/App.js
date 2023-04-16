@@ -1,24 +1,47 @@
-import React,{useState} from 'react';
+import React, { useState } from "react";
 
+const App = () => {
+  const [name, setName] = useState("");
+  const [fullName, setFullName] = useState();
+  const [pass, setPass] = useState();
 
+  const InputEvent = (event) => {
+    console.log(event.target.value);
+    setName(event.target.value);
+  };
 
+  const onSubmits = (event) => {
+    event.preventDefault();
+    setFullName(name);
+  };
 
-const App=()=>{
-
-  // const state=useState();
-  // console.log(state);
-   const [count,setCount]=useState(0);
-
-
-  
-  const InnNum=()=>{
-    setCount(count+1);
-    // console.log('clicked' + count++);
+  const InputEventTwo = (event) => {
+    setPass(event.target.value);
   }
-  return(<>
-    <h1>{count}</h1>
-    <button onClick={InnNum}>Click Me</button>
-  </>);
+  return (
+    <>
+      <div className="main_div">
+        <form onSubmit={onSubmits}>
+          <div>
+            <h1>Hello {fullName}</h1>
+            <input
+              type="text"
+              placeholder="Your Name..."
+              onChange={InputEvent}
+              value={name}
+            />
+            <input
+              type="password"
+              placeholder="Enter Your Password.."
+              onChange={InputEventTwo}
+              value={pass}
+            />
+            <button type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+    </>
+  );
 };
 
 export default App;
